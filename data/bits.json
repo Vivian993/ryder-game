@@ -1,0 +1,14 @@
+[
+  {"id": "flat", "name": "Flat", "code": "F", "type": "attack", "note": "扁平底尖，接觸地面積大，摩擦力高，適合高頻率快速位移的進攻打法。"},
+  {"id": "ball", "name": "Ball", "code": "B", "type": "balance", "note": "圓球狀底尖，滑動順暢，攻防轉換靈活，是最泛用的入門底尖之一。"},
+  {"id": "point", "name": "Point", "code": "P", "type": "stamina", "note": "尖細底尖，摩擦力極低，續轉時間長，適合耐久戰打法。"},
+  {"id": "needle", "name": "Needle", "code": "N", "type": "stamina", "note": "細長針狀底尖，接觸面積小，主打長時間穩定續轉。"},
+  {"id": "high-needle", "name": "High Needle", "code": "HN", "type": "stamina", "note": "加長版針狀底尖，重心更高，續轉與生存力進一步提升。"},
+  {"id": "low-flat", "name": "Low Flat", "code": "LF", "type": "attack", "note": "低重心扁平底尖，貼地性強，攻擊時的橫向推力明顯。"},
+  {"id": "rush", "name": "Rush", "code": "R", "type": "attack", "note": "螺旋紋理底尖，會讓刀刃在場地中主動位移，製造更多碰撞機會。"},
+  {"id": "gear-flat", "name": "Gear Flat", "code": "GF", "type": "attack", "note": "齒輪狀扁平底尖，摩擦力與位移感更強，攻擊風格更具侵略性。"},
+  {"id": "taper", "name": "Taper", "code": "T", "type": "balance", "note": "錐形底尖，介於尖與扁平之間，攻防手感均衡。"},
+  {"id": "wedge", "name": "Wedge", "code": "W", "type": "defense", "note": "楔形底尖，重心穩固，防禦時不易被撞離中心。"},
+  {"id": "turbo", "name": "Turbo", "code": "Tb", "type": "attack", "note": "特殊結構底尖，中後段會加速位移，製造出其不意的攻擊節奏。"},
+  {"id": "xtend-plus", "name": "Xtend+", "code": "X+", "type": "balance", "note": "延伸型底尖，兼顧接觸面與滑動流暢度，屬於進階均衡選擇。"}
+]

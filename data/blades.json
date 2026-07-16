@@ -1,0 +1,15 @@
+[
+  {"id": "dran-sword", "name": "Dran Sword", "nameZh": "龍劍", "type": "attack", "note": "初代主力進攻型刀刃，尖銳的劍形攻擊面，主打高頻率連續打擊。"},
+  {"id": "wizard-arrow", "name": "Wizard Arrow", "nameZh": "魔導箭", "type": "stamina", "note": "箭形輪廓、圓滑邊緣，主打續轉與耐久型打法。"},
+  {"id": "knight-shield", "name": "Knight Shield", "nameZh": "騎士盾", "type": "defense", "note": "盾形厚重輪廓，重心穩定，擅長防禦與抗打擊。"},
+  {"id": "shark-scale", "name": "Shark Scale", "nameZh": "鯊魚鱗", "type": "attack", "note": "鯊魚鱗片造型的攻擊型刀刃，賽場人氣主力之一，攻擊面密集。"},
+  {"id": "wizard-rod", "name": "Wizard Rod", "nameZh": "魔導杖", "type": "stamina", "note": "魔杖造型的續轉型刀刃，長期比賽中常見的高勝率配置。"},
+  {"id": "aero-pegasus", "name": "Aero Pegasus", "nameZh": "風翼天馬", "type": "attack", "note": "飛翼造型，強調高速旋轉下的橫向撞擊力。"},
+  {"id": "cobalt-dragoon", "name": "Cobalt Dragoon", "nameZh": "鈷藍龍", "type": "balance", "note": "龍形均衡型刀刃，攻防兩端表現平均。"},
+  {"id": "meteor-dragoon", "name": "Meteor Dragoon", "nameZh": "流星龍", "type": "balance", "note": "流星尾跡造型，均衡型設計，適應多種軸心與 Bit 組合。"},
+  {"id": "wyvern-hover", "name": "Wyvern Hover", "nameZh": "飛龍浮空", "type": "stamina", "note": "翼龍造型，輪廓輕薄，主打長時間懸浮續轉。"},
+  {"id": "knight-mail", "name": "Knight Mail", "nameZh": "騎士鎧甲", "type": "defense", "note": "鎧甲造型的防禦型刀刃，接觸面厚實、抗撞擊力強。"},
+  {"id": "rage-longinus", "name": "Rage Longinus", "nameZh": "狂怒朗基努斯", "type": "attack", "note": "尖銳突刺造型的高攻擊刀刃，主打瞬間高傷害打擊。"},
+  {"id": "tyranno-beat", "name": "Tyranno Beat", "nameZh": "暴君脈動", "type": "attack", "note": "恐龍造型的重擊型刀刃，重心偏外側，打擊力道強勁。"},
+  {"id": "bahamut-blitz", "name": "Bahamut Blitz", "nameZh": "巴哈姆特閃擊", "type": "attack", "note": "龍族造型的閃擊型刀刃，搭配金屬強化件，攻擊瞬發力高。"}
+]
