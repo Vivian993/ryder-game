@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>BEYBLADE X 百科</title>
+<meta name="description" content="Cyberpunk 風格 BEYBLADE X 百科：刀刃／軸心／底尖資料庫、鎖定機制圖解、我的收藏、備註、行事曆與對戰紀錄。">
+<meta name="theme-color" content="#05070d">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BX 百科">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Share+Tech+Mono&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="logo">BEYBLADE<span>X</span></div>
+    <div class="search-wrap" id="search-wrap" style="display:none;">
+      <input type="search" id="search-input" placeholder="搜尋 Blade／Ratchet／Bit...">
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 首頁 ===== -->
+    <section class="screen active" id="screen-home">
+      <div class="hero">
+        <div class="hero-stage">
+          <div class="qr-grid" id="qr-grid"></div>
+          <div class="scanline"></div>
+          <div class="beys">
+            <div class="bey cyan" id="bey-cyan"></div>
+            <div class="bey magenta" id="bey-magenta"></div>
+          </div>
+          <div class="clash-spark"></div>
+        </div>
+        <h1>BEYBLADE X 百科</h1>
+        <p class="tag">// SCAN.INITIALIZE.BATTLE //</p>
+      </div>
+
+      <div class="section-title">快速入口</div>
+      <div class="grid2">
+        <div class="card clickable" data-nav="screen-encyclopedia">
+          <h3 style="margin:0 0 4px;font-size:14px;">📖 百科查詢</h3>
+          <p class="small muted" style="margin:0;">Blade／Ratchet／Bit 資料庫</p>
+        </div>
+        <div class="card clickable" data-nav="screen-encyclopedia" data-lock="1">
+          <h3 style="margin:0 0 4px;font-size:14px;">🔩 鎖定機制</h3>
+          <p class="small muted" style="margin:0;">上蓋軸心固鎖全圖解</p>
+        </div>
+        <div class="card clickable" data-nav="screen-collection">
+          <h3 style="margin:0 0 4px;font-size:14px;">📷 我的收藏</h3>
+          <p class="small muted" style="margin:0;">拍照收藏你的陀螺</p>
+        </div>
+        <div class="card clickable" data-nav="screen-calendar">
+          <h3 style="margin:0 0 4px;font-size:14px;">📅 行事曆</h3>
+          <p class="small muted" style="margin:0;">對戰活動與練習排程</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 百科 ===== -->
+    <section class="screen" id="screen-encyclopedia">
+      <div class="chiprow" id="part-tabs">
+        <button class="chip active" data-part="blade">Blade 刀刃</button>
+        <button class="chip" data-part="ratchet">Ratchet 軸心</button>
+        <button class="chip" data-part="bit">Bit 底尖</button>
+        <button class="chip" data-part="lock">🔩 鎖定機制</button>
+      </div>
+
+      <div id="part-search-area">
+        <div class="chiprow" id="part-filters"></div>
+      </div>
+      <div id="part-list"></div>
+
+      <div id="lock-explainer" class="lock-explainer" style="display:none;">
+        <div class="section-title">上蓋・軸心・固鎖 全圖解</div>
+        <p class="small muted" style="margin-top:-4px;">BEYBLADE X 的三段式結構：Blade（刀刃）／Ratchet（軸心）／Bit（底尖），中間的 Ratchet 就是負責「固鎖」與「爆裂（Burst）」判定的關鍵零件。</p>
+
+        <div class="lock-diagram">
+          <div class="lock-step" data-n="1">
+            <div class="part-shape"></div>
+            <div class="txt">
+              <h4>Blade（刀刃）＋ Lock Chip（鎖定晶片）</h4>
+              <p>刀刃底部有鎖定晶片（常見為塑膠晶片或金屬晶片），會卡進 Ratchet 頂端的凹槽。金屬晶片較重、卡合較穩，塑膠晶片較輕、有利加速旋轉。</p>
+            </div>
+          </div>
+          <div class="lock-step" data-n="2">
+            <div class="part-shape"></div>
+            <div class="txt">
+              <h4>Ratchet 上半部：Socket（卡榫）＋ Latch（扣鎖）</h4>
+              <p>Ratchet 頂端的卡榫與扣鎖組成「雙穩態卡扣」，平常鎖緊固定 Blade；當受到夠強的撞擊，卡榫會瞬間轉到「解鎖」位置，讓刀刃鬆脫，這就是俗稱的 Burst（爆裂判定）。</p>
+            </div>
+          </div>
+          <div class="lock-step" data-n="3">
+            <div class="part-shape"></div>
+            <div class="txt">
+              <h4>Ratchet 下半部：Shaft（軸柱）＋ Base（底座）</h4>
+              <p>軸柱與底座決定了 Ratchet 的「身高」規格（例如 60、70、80），也決定能搭配哪種摩擦力的 Bit——身高數字越大，底座越高、握持 Bit 的力道通常也越紮實。</p>
+            </div>
+          </div>
+          <div class="lock-step" data-n="4">
+            <div class="part-shape"></div>
+            <div class="txt">
+              <h4>Bit（底尖）卡入 Base</h4>
+              <p>Bit 靠摩擦力卡進 Base 底部，不同底尖形狀（尖、扁、球狀…）會直接影響旋轉時間、位移方式與攻防手感，是整組配裝最後也是最關鍵的手感調校。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin:0 0 6px;font-size:13.5px;">💡 組裝小提醒</h4>
+          <p class="small" style="margin:0;color:#b7c6dd;line-height:1.7;">1. 鎖上 Ratchet 前先確認卡榫方向對齊凹槽再壓緊。<br>2. 螺絲鎖太緊或太鬆都會讓固鎖不穩，建議請大人協助用十字或三爪螺絲起子鎖到「剛好卡緊」即可。<br>3. 固鎖鬆動時陀螺容易提早解體，別忘了定期檢查喔！</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 收藏 ===== -->
+    <section class="screen" id="screen-collection">
+      <div class="section-title" style="display:flex;justify-content:space-between;align-items:center;">
+        <span>我的收藏</span>
+        <button class="btn sm" id="btn-add-collect">＋ 新增收藏</button>
+      </div>
+      <div class="grid2" id="collection-grid"></div>
+    </section>
+
+    <!-- ===== 備註 ===== -->
+    <section class="screen" id="screen-notes">
+      <div class="section-title" style="display:flex;justify-content:space-between;align-items:center;">
+        <span>自訂備註</span>
+        <button class="btn sm" id="btn-add-note">＋ 新增備註</button>
+      </div>
+      <div id="notes-list"></div>
+    </section>
+
+    <!-- ===== 行事曆 ===== -->
+    <section class="screen" id="screen-calendar">
+      <div class="section-title" style="display:flex;justify-content:space-between;align-items:center;">
+        <span>行事曆</span>
+        <button class="btn sm" id="btn-add-event">＋ 新增活動</button>
+      </div>
+      <div class="card">
+        <div class="cal-head">
+          <button class="btn ghost sm" id="cal-prev">←</button>
+          <h3 id="cal-title"></h3>
+          <button class="btn ghost sm" id="cal-next">→</button>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+      <div class="section-title" id="day-label"></div>
+      <div id="day-events"></div>
+    </section>
+
+    <!-- ===== 對戰紀錄 ===== -->
+    <section class="screen" id="screen-battles">
+      <div class="section-title" style="display:flex;justify-content:space-between;align-items:center;">
+        <span>對戰紀錄</span>
+        <button class="btn sm" id="btn-add-battle">＋ 新增紀錄</button>
+      </div>
+      <div id="battle-stats"></div>
+      <div id="battles-list"></div>
+    </section>
+
+  </main>
+
+  <nav class="tabbar">
+    <button class="active" data-target="screen-home"><span class="ic">⌂</span>首頁</button>
+    <button data-target="screen-encyclopedia"><span class="ic">📖</span>百科</button>
+    <button data-target="screen-collection"><span class="ic">📷</span>收藏</button>
+    <button data-target="screen-notes"><span class="ic">📝</span>備註</button>
+    <button data-target="screen-calendar"><span class="ic">📅</span>行事曆</button>
+    <button data-target="screen-battles"><span class="ic">🏆</span>對戰</button>
+  </nav>
+
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modal-title"></h2>
+        <button class="modal-close" id="modal-close">✕</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+</div>
+
+<script src="app.js"></script>
+<script>
+  // home quick-entry cards navigate to the right tab (and optionally open lock explainer)
+  document.querySelectorAll('[data-nav]').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelector(`nav.tabbar button[data-target="${card.dataset.nav}"]`).click();
+      if(card.dataset.lock){
+        setTimeout(() => document.querySelector('#part-tabs button[data-part="lock"]').click(), 0);
+      }
+    });
+  });
+</script>
+</body>
+</html>
